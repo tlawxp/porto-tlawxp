@@ -1,0 +1,55 @@
+@import "color";
+
+[class="container"] {
+  [class="contact"] {
+    background-color: map-get($color, "Lavender");
+    text-align: center;
+    align-items: center;
+    padding: 80px 30px;
+    border-top: 2px solid map-get($color, "black");
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    [class="box"] {
+      width: 300px;
+      margin: auto;
+      transform: translateY(20px);
+
+      input[type="email"],
+      [id="message"] {
+        border: 2px solid map-get($color, "black");
+        background: map-get($color, "Lavender");
+        width: 250px;
+        padding: 15px 25px;
+        margin-top: 15px;
+        color: map-get($color, "black");
+        font-family: Comic;
+        box-shadow: 5px 5px map-get($color, "black");
+        outline: none;
+        transition: .3s ease;
+
+        &:focus {
+          transform: scale(1.1);
+        }
+      }
+
+      button[type="submit"] {
+        background: map-get($color, "HotPink");
+        color: map-get($color, "black");
+        width: 250px;
+        border: 2px solid map-get($color, "black");
+        padding: 15px 25px;
+        margin-top: 15px;
+        box-shadow: 5px 5px map-get($color, "black");
+        font-family: Comic;
+        transition: .3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

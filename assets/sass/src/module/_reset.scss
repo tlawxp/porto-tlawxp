@@ -1,0 +1,59 @@
+@import "color";
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: map-get($color, "black");
+}
+
+p {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Cute-Love;
+  letter-spacing: 3px;
+  color: map-get($color, "HotPink");
+  /* text-shadow: 2px 2px map-get($color, "white"); */
+}
+
+body {
+  font-family: Comic;
+  color: map-get($color, "Lavender");
+  background: map-get($color, "black");
+  /* background-image: url("../../img/illust_106031896_20241122_144320.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+[class="container"] {
+  max-width: 576px;
+  margin: auto;
+}

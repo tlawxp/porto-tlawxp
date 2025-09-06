@@ -1,0 +1,128 @@
+@import "color";
+
+@media screen and (max-width: 576px) {
+  [class="header"] {
+    [class="navbar"] {
+      ul {
+        display: none;
+      }
+      [class="sidebar-btn"] {
+        display: block;
+        button {
+          background: none;
+          border: none;
+          i {
+            color: map-get($color, "HotPink");
+            font-size: 2em;
+            padding: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    [class="bg-sidebar"] {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0, .6);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 999999;
+      [class="sidebar"] {
+        width: 300px;
+        height: 100vh;
+        background-color: map-get($color, "black");
+        padding: 20px 30px;
+        border-radius: 0 50px 50px 0;
+        /* border: 1px solid #fff; */
+        box-shadow: 5px 5px map-get($color, "Lavender");
+        [class="header"] {
+          display: flex;
+          border-bottom: 2px solid map-get($color, "HotPink");
+          justify-content: space-between;
+          align-content: center;
+          align-items: center;
+          [id="btn-close"] {
+            background: none;
+            color: map-get($color, "HotPink");
+            font-size: 2em;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+          }
+        }
+        [class="content"] {
+          ul {
+            li {
+              list-style: none;
+              border-bottom: 2px solid map-get($color, "HotPink");
+              margin-top: 10px;
+              transition: 0.3s ease;
+              a {
+                display: inline-block;
+                color: map-get($color, "Lavender");
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 10px 0;
+                width: 100%;
+                transition: .3s ease;
+                &:hover {
+                  margin-left: 20px;
+                }
+                i {
+                  padding: 5px;
+                  border-radius: 5px;
+                  border: 2px solid map-get($color, "black");
+                  background: map-get($color, "HotPink");
+                  color: map-get($color, "black");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  [class="container"] {
+    [class="home"] {
+      flex-direction: column;
+      [class="box"]:nth-child(1) {
+        height: 450px;
+        width: 100%;
+        h1 {
+          transform: translateY(250%);
+        }
+      }
+      [class="box"]:nth-child(2) {
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+        border: 2px solid map-get($color, "black");
+        border-bottom: none;
+      }
+    }
+    [class="skill"] {
+      flex-direction: column;
+      [class="flex"] {
+        flex-direction: column;
+        [class="text"] {
+          padding: 0;
+          width: 100%;
+        }
+        [class="box1"] {
+          padding: 0;
+          width: 100%;
+          transform: translateY(20px);
+          [class="box"] {
+            width: 300px;
+            /* border: 1px solid #fff; */
+            margin: auto;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<div class="header">
+  <div class="navbar" id="navbar">
+    <h2>TlawXp</h2>
+    <ul>
+      <li><a href="#about"> about</a></li>
+      <li><a href="#skill"> Skill</a></li>
+      <li><a href="#portofolio"> Portofolio</a></li>
+      <li><a href="#contact"> Contact</a></li>
+    </ul>
+    <div class="sidebar-btn">
+      <button id="btn-open"><i class="fa-regular fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="bg-sidebar" id="bg-sidebar">
+    <div class="sidebar">
+      <div class="header">
+        <h2>TlawXp</h2>
+        <button id="btn-close"><i class="fa-regular fa-arrow-left"></i></button>
+      </div>
+      <div class="content">
+        <ul>
+          <li><a href="#about"><i class="fa-regular fa-home"></i> about</a></li>
+          <li><a href="#skill"><i class="fa-regular fa-code"></i> skill</a></li>
+          <li><a href="#portofolio"><i class="fa-regular fa-user"></i> portofolio</a></li>
+          <li><a href="#contact"><i class="fa-regular fa-envelope"></i> contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let btnOpen = document.getElementById("btn-open");
+  let btnClose = document.getElementById("btn-close");
+  let sidebar = document.getElementById("bg-sidebar");
+  let text = document.getElementById("text");
+  let navbar = document.getElementById("navbar");
+  let divContainer = document.getElementById("container");
+
+  btnOpen.onclick = () => {
+    sidebar.style.display = "block";
+    sidebar.style.animation = "btnOpen .5s ease forwards alternate";
+  }
+  btnClose.onclick = () => {
+    sidebar.style.animation = "btnClose .5s ease forwards alternate";
+  }
+  window.addEventListener("scroll", () => {
+    let valueY = window.scrollY;
+    /* text.style.marginLeft = valueY * 1 + "px"; */
+    if (valueY > 100) {
+      navbar.style.animation = "Animasinavbar .5s ease forwards alternate";
+      navbar.style.position = "fixed";
+      divContainer.style.marginTop = "80px";
+    } else if (valueY < 3) {
+      navbar.style.position = "inherit";
+      navbar.style.animation = "none";
+      divContainer.style.marginTop = "0px";
+    }
+  })
+</script>

@@ -1,0 +1,118 @@
+@import "color";
+@import "mixin";
+
+[class="container"] {
+  [class="skill"] {
+    /* background-color: map-get($color, "Lavender"); */
+    text-align: center;
+    padding: 80px 30px;
+    border-top: 2px solid map-get($color, "black");
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    [class="flex"] {
+      display: flex;
+
+      // [class="text"] {
+      //   width: 50%;
+      //   padding: 0 30px;
+      //   text-align: center;
+      //   align-content: center;
+      //   img {
+      //     width: 250px;
+      //     border-radius: 50%;
+      //     border: 2px solid map-get($color, "HotPink");
+      //     /* box-shadow: 2px 2px map-get($color, "Lavender"); */
+      //   }
+      // }
+      [class="box1"] {
+        margin: auto;
+        width: 100%;
+        // padding: 0 30px;
+        // border: 1px solid #fff;
+
+        [class="box"] {
+          width: 400px;
+          /* border: 1px solid #fff; */
+          text-align: left;
+          margin-top: 5px;
+          margin: auto;
+
+          [class="box-skill"] {
+            width: 100%;
+            height: 30px;
+            background-color: map-get($color, "Lavender");
+            border: 2px solid map-get($color, "black");
+            box-shadow: 2px 2px map-get($color, "Lavender");
+            border-radius: 30px;
+
+            [class="html"],
+            [class="css"],
+            [class="js"],
+            [class="py"],
+            [class="php"],
+            [class="flask"],
+            [class="mysql"],
+            [class="jepang"],
+            [class="inggris"],
+            [class="world"],
+            [class="excel"],
+            [class="anime"] {
+              border-radius: 30px;
+            }
+
+            [class="html"] {
+              @include skill(80%);
+            }
+
+            [class="css"] {
+              @include skill(70%);
+            }
+
+            [class="js"] {
+              @include skill(60%);
+            }
+
+            [class="py"] {
+              @include skill(65%);
+            }
+
+            [class="php"] {
+              @include skill(50%);
+            }
+
+            [class="flask"] {
+              @include skill(60%);
+            }
+
+            [class="mysql"] {
+              @include skill(40%);
+            }
+
+            [class="jepang"] {
+              @include skill(40%);
+            }
+
+            [class="inggris"] {
+              @include skill(40%);
+            }
+
+            [class="world"] {
+              @include skill(70%);
+            }
+
+            [class="excel"] {
+              @include skill(40%);
+            }
+
+            [class="anime"] {
+              @include skill(50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

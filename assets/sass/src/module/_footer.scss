@@ -1,0 +1,13 @@
+@import "color";
+
+[class="footer"] {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+    color: map-get($color, "Lavender");
+  }
+}

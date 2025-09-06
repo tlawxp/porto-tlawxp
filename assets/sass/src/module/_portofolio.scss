@@ -1,0 +1,67 @@
+@import "color";
+
+[class="container"] {
+  [class="portofolio"] {
+    padding: 80px 30px;
+    /* background-color: map-get($color, "Lavender"); */
+    /* backdrop-filter: blur(5px); */
+    /* -webkit-backdrop-filter: blur(5px); */
+    text-align: center;
+    border-top: 2px solid map-get($color, "black");
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    [class="card-box"] {
+      display: flex;
+      flex-wrap: wrap;
+      // border: 1px solid #fff;
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px 0;
+      align-items: center;
+      justify-content: center;
+
+      [class="project-card"] {
+        // flex: 1 1 250px;
+        background: #1f1f2e;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
+
+        [class="project-thumb"] {
+          width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+
+        h3 {
+          color: map-get($color, "HotPink");
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+
+        [class="button-group"] a {
+          display: inline-block;
+          margin: 10px 5px 0 5px;
+          padding: 8px 12px;
+          background: map-get($color, "HotPink");
+          color: map-get($color, "black");
+          border-radius: 5px;
+          text-decoration: none;
+          transition: 0.3s;
+        }
+
+        [class="button-group"] a:hover {
+          background: #e754a2;
+        }
+      }
+    }
+  }
+}

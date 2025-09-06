@@ -1,0 +1,7 @@
+@import "color";
+
+@mixin skill($width) {
+  background: linear-gradient(30deg, map-get($color, "HotPink"), map-get($color, "DeepPink"));
+  width: $width;
+  height: 100%;
+}
